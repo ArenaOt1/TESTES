@@ -1,12 +1,12 @@
 local config = {
-	{ position = { x = 32728, y = 32875, z = 7 }, destination = { x = 34015, y = 31890, z = 8 } },
+	{ position = { x = 32728, y = 32878, z = 7 }, destination = { x = 34015, y = 31890, z = 8 } },
 }
 
 local entrance = Action()
 function entrance.onUse(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
-		return false
+		return true
 	end
 	if player:getLevel() < 150 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You need at least level 150 to enter.")

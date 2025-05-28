@@ -25,9 +25,15 @@ function spell.onCastSpell(creature, variant)
 	end
 	local duration = 15000
 	condition:setTicks(duration)
-	local conditionCooldown = Condition(CONDITION_SPELLCOOLDOWN, CONDITIONID_DEFAULT, 264)
-	conditionCooldown:setTicks((cooldown * 1000 * 60) / configManager.getFloat(configKeys.RATE_SPELL_COOLDOWN))
+	local conditionCooldown = Condition(CONDITION_SPELLCOOLDOWN, CONDITIONID_DEFAULT, 264)	
 	-- creature:getPosition():sendMagicEffect(CONST_ME_AVATAR_APPEAR)
+	-- CHECK SANGUINE LEGS
+	local legs = creature:getSlotItem(CONST_SLOT_LEGS)
+	if legs and legs:getId() == 43876 then
+	conditionCooldown:setTicks(((cooldown * 1000 * 60) - 1800000) / configManager.getFloat(configKeys.RATE_SPELL_COOLDOWN))
+		else
+	conditionCooldown:setTicks((cooldown * 1000 * 60) / configManager.getFloat(configKeys.RATE_SPELL_COOLDOWN))
+		end
 	creature:addCondition(conditionCooldown)
 	creature:addCondition(condition)
 	creature:avatarTimer((os.time() * 1000) + duration)
@@ -40,7 +46,7 @@ spell:group("support")
 spell:id(264)
 spell:name("Avatar of Steel")
 spell:words("uteta res eq")
-spell:level(300)
+spell:level(1)
 spell:mana(800)
 spell:isPremium(true)
 spell:cooldown(1000) -- Cooldown is calculated on the casting

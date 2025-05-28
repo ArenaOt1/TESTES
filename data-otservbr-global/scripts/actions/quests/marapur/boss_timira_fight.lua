@@ -182,11 +182,6 @@ encounter
 		end,
 	})
 	:autoAdvance()
-encounter:addRemoveMonsters():autoAdvance()
-encounter:addStage({ start = function() end }) -- FIRST stage, Action timiraBucket.onUse activates next stage
-
-encounter:addRemoveMonsters():autoAdvance()
-encounter:addStage({ start = function() end }) -- SECOND stage, Action corruptedWater.onUse activates next stage
 
 encounter:addRemoveMonsters():autoAdvance()
 encounter:addSpawnMonsters({ -- THIRD stage, boss fight

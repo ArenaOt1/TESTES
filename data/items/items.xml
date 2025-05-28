@@ -8400,7 +8400,7 @@
 		<attribute key="attack" value="25"/>
 		<attribute key="weight" value="2000"/>
 		<attribute key="script" value="moveevent;weapon">
-			<attribute key="breakChance" value="3"/>
+			<attribute key="breakChance" value="0"/>
 			<attribute key="weaponType" value="missile"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
@@ -42113,12 +42113,17 @@
 		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="200"/>
 	</item>
-	<item id="21292" article="a" name="feedbag">
+	<item id="21292" article="a" name="arena backpack">
+		<attribute key="description" value="15 mana regeneration and 15 life regeneration."/>
 		<attribute key="primarytype" value="containers"/>
-		<attribute key="containersize" value="20"/>
+		<attribute key="containersize" value="32"/>
 		<attribute key="weight" value="1800"/>
-		<attribute key="imbuementslot" value="1">
+		<attribute key="healthgain" value="15"/>
+		<attribute key="manaticks" value="2000"/>
+		<attribute key="managain" value="15"/>
+		<attribute key="imbuementslot" value="2">
 			<attribute key="increase capacity" value="3"/>
+			<attribute key="skillboost magic level" value="1"/>
 		</attribute>
 		<attribute key="script" value="moveevent">
 			<attribute key="slot" value="backpack"/>
@@ -43460,31 +43465,31 @@ Awarded by TibiaMagazine.com.ve"/>
 		<attribute key="containersize" value="24"/>
 	</item>
 	<item id="21989" name="dead dawnfire asura">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="21990"/>
 		<attribute key="containersize" value="24"/>
 	</item>
 	<item id="21990" name="dead dawnfire asura">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="21991"/>
 		<attribute key="containersize" value="12"/>
 	</item>
 	<item id="21991" name="dead dawnfire asura">
-		<attribute key="duration" value="60"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="21992" name="dead midnight asura">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="21993"/>
 		<attribute key="containersize" value="24"/>
 	</item>
 	<item id="21993" name="dead midnight asura">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="21994"/>
 		<attribute key="containersize" value="12"/>
 	</item>
 	<item id="21994" name="dead midnight asura">
-		<attribute key="duration" value="60"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="21995" name="dead omnivora">
@@ -45010,7 +45015,7 @@ Awarded by TibiaMisterios.com.br"/>
 	<item fromid="22716" toid="22719" article="a" name="stone tile">
 		<attribute key="primarytype" value="artificial tiles"/>
 	</item>
-	<item id="22720" article="an" name="iron token" plural="iron tokens">
+	<item id="22720" article="an" name="addon token" plural="addon tokens">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="20"/>
 	</item>
@@ -45018,7 +45023,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="1"/>
 	</item>
-	<item id="22722" article="a" name="copper token" plural="copper tokens">
+	<item id="22722" article="a" name="mount token" plural="mount tokens">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="20"/>
 	</item>
@@ -46942,11 +46947,43 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="wrapableto" value="23398"/>
 		<attribute key="weight" value="850"/>
 	</item>
-	<item id="23721" article="a" name="gold pouch">
+	<item id="23721" article="a" name="loot pouch">
 		<attribute key="description" value="A infinity bag where you can hold coins."/>
 		<attribute key="containersize" value="20"/>
 		<attribute key="movable" value="0"/>
 	</item>
+	<item id="44780" article="a" name="Amulet Xp">
+	    <attribute key="weight" value="50" />
+        <attribute key="description" value="Amulet que lhe permite ganhar 10% de xp." />
+		<attribute key="primarytype" value="amulets and necklaces"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="necklace"/>
+		</attribute>
+	</item>
+	<item id="44781" article="a" name="Ring Xp">
+	    <attribute key="weight" value="50" />
+        <attribute key="description" value="Ring que lhe permite ganhar 10% de xp." />
+        <attribute key="primarytype" value="rings"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ring"/>
+		</attribute>
+    </item>
+	<item id="44782" article="a" name="Dog teleport scroll">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Teleport para o templo."/>
+		<attribute key="charges" value="10"/>
+		<attribute key="weight" value="10"/>
+	</item>
+	<!-- <item id="44783" article="a" name="Dog backpack">
+		<attribute key="primarytype" value="containers"/>
+        <attribute key="containersize" value="52"/>
+		<attribute key="manaticks" value="3000"/>
+		<attribute key="managain" value="40"/>
+		<attribute key="healthticks" value="3000"/>
+		<attribute key="healthgain" value="40"/>
+		<attribute key="imbuementslot" value="1"/>
+		<attribute key="slot" value="backpack"/>       
+	</item> -->
 	<item id="23722" article="a" name="gold converter">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="showCharges" value="1"/>
@@ -58339,17 +58376,17 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	</item>
 	<item fromid="31399" toid="31401" name="RESERVED SPRITE"/>
 	<item id="31402" article="a" name="dead adult goanna">
-		<attribute key="duration" value="60"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="31403" article="a" name="dead adult goanna">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31402"/>
 		<attribute key="containersize" value="16"/>
 	</item>
 	<item id="31404" article="a" name="dead adult goanna">
 		<attribute key="fluidsource" value="blood"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31403"/>
 		<attribute key="containersize" value="32"/>
 	</item>
@@ -58360,18 +58397,18 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="containersize" value="32"/>
 	</item>
 	<item id="31406" article="a" name="dead young goanna">
-		<attribute key="duration" value="60"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="31407" article="a" name="dead young goanna">
 		<attribute key="fluidsource" value="blood"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31406"/>
 		<attribute key="containersize" value="16"/>
 	</item>
 	<item id="31408" article="a" name="dead young goanna">
 		<attribute key="fluidsource" value="blood"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31407"/>
 		<attribute key="containersize" value="32"/>
 	</item>
@@ -58406,17 +58443,17 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	</item>
 	<item id="31415" name="RESERVED SPRITE"/>
 	<item id="31416" article="a" name="dead priestess of the wild sun">
-		<attribute key="duration" value="50"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="31417" article="a" name="dead priestess of the wild sun">
-		<attribute key="duration" value="100"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31416"/>
 		<attribute key="containersize" value="16"/>
 	</item>
 	<item id="31418" article="a" name="dead priestess of the wild sun">
 		<attribute key="fluidsource" value="blood"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31417"/>
 		<attribute key="containersize" value="32"/>
 	</item>
@@ -58427,17 +58464,17 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="containersize" value="32"/>
 	</item>
 	<item id="31420" article="a" name="dead black sphinx acolyte">
-		<attribute key="duration" value="60"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="31421" article="a" name="dead black sphinx acolyte">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31420"/>
 		<attribute key="containersize" value="32"/>
 	</item>
 	<item id="31422" article="a" name="dead black sphinx acolyte">
 		<attribute key="fluidsource" value="blood"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31421"/>
 		<attribute key="containersize" value="32"/>
 	</item>
@@ -59318,17 +59355,17 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="31643" article="a" name="dead burning gladiator">
-		<attribute key="duration" value="60"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="31644" article="a" name="dead burning gladiator">
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31643"/>
 		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="31645" article="a" name="dead burning gladiator">
 		<attribute key="fluidsource" value="blood"/>
-		<attribute key="duration" value="300"/>
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31644"/>
 		<attribute key="containersize" value="10"/>
 	</item>
@@ -75004,6 +75041,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="skillsword" value="5"/>
 		<attribute key="weight" value="6100"/>
 		<attribute key="imbuementslot" value="3">
+		<attribute key="movable" value="0"/>
 			<attribute key="life leech" value="3"/>
 			<attribute key="mana leech" value="3"/>
 			<attribute key="critical hit" value="3"/>
@@ -75699,5 +75737,37 @@ Granted by TibiaGoals.com"/>
 		<attribute key="primarytype" value="valuables" />
 		<attribute key="weight" value="120" />
 	</item>
+	<item id="44783" article="a" name="skull backpack">
+		<attribute key="description" value="15 mana regeneration and 15 life regeneration."/>
+		<attribute key="primarytype" value="containers"/>
+		<attribute key="containersize" value="32"/>
+		<attribute key="weight" value="1800"/>
+		<attribute key="healthgain" value="15"/>
+		<attribute key="managain" value="15"/>
+		<attribute key="imbuementslot" value="2">
+			<attribute key="increase capacity" value="3"/>
+			<attribute key="skillboost magic level" value="1"/>
+		</attribute>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="backpack"/>
+		</attribute>
+	</item>		
+		<item id="44784" article="a" name="angel dummt">
+		<attribute key="primarytype" value="furniture"/>
+		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="44785"/>
+		<attribute key="type" value="dummy">
+			<attribute key="rate" value="125"/>
+		</attribute>
+	</item>
+	<item id="44785" article="a" name="angel dummt">
+		<attribute key="primarytype" value="furniture"/>
+		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="44784"/>
+		<attribute key="type" value="dummy">
+			<attribute key="rate" value="125"/>
+		</attribute>
+	</item>	
 </items>
-

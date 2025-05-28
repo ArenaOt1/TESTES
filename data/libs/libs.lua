@@ -15,3 +15,7 @@ dofile(CORE_DIRECTORY .. "/libs/systems/load.lua")
 
 -- Tables
 dofile(CORE_DIRECTORY .. "/libs/tables/load.lua")
+
+-- Tasks Library
+dofile(DATA_DIRECTORY .. "/lib/others/task_lib.lua")
+

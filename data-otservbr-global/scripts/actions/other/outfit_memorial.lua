@@ -53,7 +53,7 @@ function outfitMemorial.onUse(player, item, fromPosition, target, toPosition, is
 		response:addU16(#royalOutfitCache[i])
 		for j = 1, #royalOutfitCache[i] do
 			response:addString(royalOutfitCache[i][j], "outfitMemorial.onUse - royalOutfitCache[i][j]")
-		end
+			         		end
 	end
 
 	response:sendToPlayer(player)

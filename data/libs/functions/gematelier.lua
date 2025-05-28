@@ -36,8 +36,20 @@ local config = {
 		},
 		chance = {
 			influenced = 0,
-			fiendish = 9000,
-			archfoe = 3000,
+			fiendish = 25000,
+			archfoe = 40000,
+		},
+		maxCount = 1,
+	},
+	tokens = {
+		names = {
+			"addon token",
+			"mount token",			
+		},
+		chance = {
+			influenced = 0,
+			fiendish = 25000,
+			archfoe = 16000,
 		},
 		maxCount = 1,
 	},

@@ -7,14 +7,14 @@ local entranceYselda = Action()
 function entranceYselda.onUse(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
-		return false
+		return true
 	end
-	if not player:canFightBoss("Megasylvan Yselda") then
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "This root seems to thicken and wreathe the moment you try to grab it.")
-		player:teleportTo(fromPosition, true)
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-		return false
-	end
+	-- if not player:canFightBoss("Megasylvan Yselda") then
+	-- 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "This root seems to thicken and wreathe the moment you try to grab it.")
+	-- 	player:teleportTo(fromPosition, true)
+	-- 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	-- 	return true
+	-- end
 	for value in pairs(config) do
 		if Position(config[value].position) == item:getPosition() then
 			player:teleportTo(Position(config[value].destination))

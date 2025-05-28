@@ -159,5 +159,3 @@ function playerLoginGlobal.onLogin(player)
 	player:registerEvent("BossParticipation")
 	return true
 end
-
-playerLoginGlobal:register()

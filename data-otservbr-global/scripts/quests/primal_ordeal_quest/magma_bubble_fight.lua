@@ -42,26 +42,21 @@ function encounter:onReset(position)
 end
 
 encounter:addRemoveMonsters():autoAdvance()
-encounter:addBroadcast("You've entered the volcano."):autoAdvance("1s")
+-- encounter:addBroadcast("You've entered the volcano."):autoAdvance("1s")
 
-encounter:addSpawnMonsters({
-	{
-		name = "The End of Days",
-		amount = 3,
-		event = "fight.magma-bubble.TheEndOfDaysHealth",
-	},
-	{
-		name = "Magma Crystal",
-		event = "fight.magma-bubble.MagmaCrystalDeath",
-		positions = {
-			Position(33647, 32891, 15),
-			Position(33647, 32926, 15),
-			Position(33670, 32898, 15),
-		},
-	},
-})
+-- encounter:addSpawnMonsters({
+-- 	{
+-- 		name = "The End of Days",
+-- 		amount = 3,
+-- 		event = "fight.magma-bubble.TheEndOfDaysHealth",
+-- 	},
+-- 	{
+-- 		name = "Magma Crystal",
+-- 		event = "fight.magma-bubble.MagmaBubbleDeath",
+-- 	},
+-- })
 
-encounter:addRemoveMonsters():autoAdvance()
+-- encounter:addRemoveMonsters():autoAdvance()
 encounter:addBroadcast("The whole Volcano starts to vibrate! Prepare yourself!"):autoAdvance("3s")
 
 encounter:addSpawnMonsters({
@@ -72,7 +67,6 @@ encounter:addSpawnMonsters({
 	},
 })
 
-encounter:addRemoveMonsters():autoAdvance()
 encounter:addBroadcast("You've upset the volcano and now it's going to take its revenge!"):autoAdvance("3s")
 
 encounter
@@ -268,17 +262,17 @@ end
 
 theEndOfDaysHealth:register()
 
-local magmaCrystalDeath = CreatureEvent("fight.magma-bubble.MagmaCrystalDeath")
-function magmaCrystalDeath.onDeath()
-	local crystals = encounter:countMonsters("magma crystal")
-	if crystals == 0 then
-		encounter:nextStage()
-	else
-		encounter:broadcast(MESSAGE_EVENT_ADVANCE, "A magma crystal has been destroyed! " .. crystals .. " remaining.")
-	end
-end
+-- local magmaCrystalDeath = CreatureEvent("fight.magma-bubble.MagmaCrystalDeath")
+-- function magmaCrystalDeath.onDeath()
+-- 	local crystals = encounter:countMonsters("magma crystal")
+-- 	if crystals == 0 then
+-- 		encounter:nextStage()
+-- 	else
+-- 		encounter:broadcast(MESSAGE_EVENT_ADVANCE, "A magma crystal has been destroyed! " .. crystals .. " remaining.")
+-- 	end
+-- end
 
-magmaCrystalDeath:register()
+-- magmaCrystalDeath:register()
 
 local endOfDaysDeath = CreatureEvent("fight.magma-bubble.TheEndOfDaysDeath")
 function endOfDaysDeath.onDeath()

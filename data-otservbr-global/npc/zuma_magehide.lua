@@ -55,6 +55,9 @@ npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 npcConfig.shop = {
 	{ itemName = "axe ring", clientId = 3092, buy = 500 },
 	{ itemName = "bronze amulet", clientId = 3056, buy = 100, count = 200 },
+	{ itemName = "collar of blue plasma", clientId = 23542, buy = 8000 },
+	{ itemName = "collar of green plasma", clientId = 23543, buy = 8000 },
+	{ itemName = "collar of red plasma", clientId = 23544, buy = 8000 },
 	{ itemName = "club ring", clientId = 3093, buy = 500 },
 	{ itemName = "dragon necklace", clientId = 3085, buy = 1000, count = 200 },
 	{ itemName = "dwarven ring", clientId = 3097, buy = 3000 },
@@ -64,7 +67,12 @@ npcConfig.shop = {
 	{ itemName = "life ring", clientId = 3052, buy = 900 },
 	{ itemName = "might ring", clientId = 3048, buy = 5000, count = 20 },
 	{ itemName = "power ring", clientId = 3050, buy = 100 },
+	{ itemName = "prismatic necklace", clientId = 16113, buy = 700, count = 750 },
+	{ itemName = "prismatic ring", clientId = 16114, buy = 5000 },
 	{ itemName = "protection amulet", clientId = 3084, buy = 700, count = 250 },
+	{ itemName = "ring of blue plasma", clientId = 23529, buy = 8000 },
+	{ itemName = "ring of green plasma", clientId = 23531, buy = 8000 },
+	{ itemName = "ring of red plasma", clientId = 23533, buy = 8000 },
 	{ itemName = "ring of healing", clientId = 3098, buy = 2000 },
 	{ itemName = "silver amulet", clientId = 3054, buy = 100, count = 200 },
 	{ itemName = "stealth ring", clientId = 3049, buy = 5000 },
@@ -72,6 +80,7 @@ npcConfig.shop = {
 	{ itemName = "strange talisman", clientId = 3045, buy = 100, count = 200 },
 	{ itemName = "sword ring", clientId = 3091, buy = 500 },
 	{ itemName = "time ring", clientId = 3053, buy = 5000 },
+	{ itemName = "gill necklace", clientId = 16108, buy = 5000 },
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)

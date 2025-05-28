@@ -19,7 +19,7 @@ function forestOfLife.onStepIn(creature, item, position, fromPosition)
 		if Position(config[value].position) == player:getPosition() then
 			player:teleportTo(Position(config[value].destination))
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-			return true
+			return false
 		end
 	end
 end
